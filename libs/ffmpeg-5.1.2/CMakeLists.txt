@@ -1,5 +1,7 @@
-target_link_libraries(program ${FFMPEG_LIBS})
-target_include_directories(program
+add_executable(ffmpeg ${MAIN_FILES})
+
+target_link_libraries(ffmpeg ${FFMPEG_LIBS})
+target_include_directories(ffempg
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/build/include/libavcodec
     ${CMAKE_CURRENT_SOURCE_DIR}/build/include/libavdevice
