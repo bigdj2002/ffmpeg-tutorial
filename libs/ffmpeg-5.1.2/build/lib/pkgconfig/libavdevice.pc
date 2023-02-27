@@ -1,0 +1,14 @@
+prefix=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build
+exec_prefix=${prefix}
+libdir=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build/lib
+includedir=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 59.7.100
+Requires: 
+Requires.private: libavfilter >= 8.44.100, libswscale >= 6.7.100, libavformat >= 59.27.100, libavcodec >= 59.37.100, libavutil >= 57.28.100
+Conflicts:
+Libs: -L${libdir}  -lavdevice 
+Libs.private: -lm -lxcb -lxcb-shm -lxcb-shape -lxcb-xfixes -lasound
+Cflags: -I${includedir}

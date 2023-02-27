@@ -1,0 +1,14 @@
+prefix=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build
+exec_prefix=${prefix}
+libdir=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build/lib
+includedir=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 59.27.100
+Requires: 
+Requires.private: libavcodec >= 59.37.100, libavutil >= 57.28.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -lbz2 -lz -lssl -lcrypto
+Cflags: -I${includedir}

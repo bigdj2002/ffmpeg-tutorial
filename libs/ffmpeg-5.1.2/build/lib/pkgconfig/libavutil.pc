@@ -1,0 +1,14 @@
+prefix=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build
+exec_prefix=${prefix}
+libdir=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build/lib
+includedir=/storage/open-source/ffmpeg/ffmpeg-5.1.2/build/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.28.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lva-drm -lva -lva-x11 -lva -lm -lva -lX11
+Cflags: -I${includedir}
